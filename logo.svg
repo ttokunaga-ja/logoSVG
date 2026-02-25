@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#FFFFFF"/>
+  <g fill="#000000">
+    <!-- 
+      Base Arch (Gate) & Symmetrical Hand Negative Space. 
+      This path is completely untouched from v19, maintaining perfect geometric symmetry.
+    -->
+    <path d="
+      M 100,442
+      L 100,232
+      A 156,156 0 0,1 412,232
+      L 412,442
+      
+      L 348,432
+      L 348,208
+      A 12,12 0 0,0 324,208
+      
+      L 324,248
+      A 8,8 0 0,1 308,248
+      
+      L 308,184
+      A 12,12 0 0,0 284,184
+      
+      L 284,248
+      A 8,8 0 0,1 268,248
+      
+      L 268,168
+      A 12,12 0 0,0 244,168
+      
+      L 244,248
+      A 8,8 0 0,1 228,248
+      
+      L 228,184
+      A 12,12 0 0,0 204,184
+      
+      L 204,248
+      A 8,8 0 0,1 188,248
+      
+      L 188,208
+      A 12,12 0 0,0 164,208
+
+      L 164,432
+      Z
+    "/>
+
+    <!-- 
+      Minimalist Chess Knight (Lower Center).
+      Sized to fit beautifully under the vertical lines, without grazing any edges.
+      Redesigned to a classic, immediately recognizable knight profile facing left.
+    -->
+    <path d="
+      M 216,432
+      L 296,432
+      L 290,416
+      L 222,416
+      Z
+      
+      M 230,412
+      L 282,412
+      Q 290,360 275,300
+      L 275,270
+      L 260,284
+      Q 240,284 216,316
+      L 216,336
+      L 236,340
+      Q 252,344 246,364
+      Q 240,380 230,412
+      Z
+    "/>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><style>body{margin:0;background:#fff;}</style></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#eee"/>
+  
+  <!-- Step 1: just the outer arc test -->
+  <!-- From (108,310) to (404,310) with centre (256,310) r=148 -->
+  <!-- sweep=1 should go BELOW (through y=458) -->
+  <path fill="rgba(255,0,0,0.3)" stroke="red" d="M 108,310 A 148,148 0 0,1 404,310 Z"/>
+  
+  <!-- Step 2: arms -->
+  <rect x="108" y="72" width="64" height="238" fill="rgba(0,0,255,0.2)" stroke="blue"/>
+  <rect x="340" y="72" width="64" height="238" fill="rgba(0,0,255,0.2)" stroke="blue"/>
+  
+  <!-- Step 3: inner arc -->
+  <!-- From (172,310) to (340,310) with centre (256,310) r=84 -->
+  <!-- sweep of inner arc - let us test CCW (0) -->
+  <path fill="rgba(0,255,0,0.4)" stroke="green" d="M 340,310 A 84,84 0 0,1 172,310 Z"/>
+  
+  <!-- Dots at key points -->
+  <circle cx="108" cy="310" r="5" fill="black"/>
+  <circle cx="404" cy="310" r="5" fill="black"/>
+  <circle cx="172" cy="310" r="5" fill="purple"/>
+  <circle cx="340" cy="310" r="5" fill="purple"/>
+  <circle cx="256" cy="310" r="5" fill="orange"/>
+  <circle cx="256" cy="458" r="5" fill="darkred"/> <!-- outer arc bottom -->
+  <circle cx="256" cy="394" r="5" fill="darkgreen"/> <!-- inner arc bottom -->
+  
+  <!-- Labels -->
+  <text x="50" y="310" font-size="12">y=310</text>
+  <text x="256" y="465" font-size="12">y=458</text>
+  <text x="256" y="400" font-size="12">y=394</text>
+</svg>
+</body>
+</html>
