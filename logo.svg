@@ -1,6 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" fill="#FFFFFF" />
-  <g fill="#000000">
+  
+  <!-- "translate(512, 0) scale(-1, 1)" completely flips everything horizontally across the exact center (256, 256) -->
+  <g fill="#000000" transform="translate(512, 0) scale(-1, 1)">
+    
+    <!-- Arch with cyber slashes -->
     <path d="
       M 100,442
       L 100,232
@@ -52,14 +56,11 @@
       Z
     "/>
 
-    <!-- Horizontal Base (16px thick, reduced to 2/3 of 24px) -->
-    <path d="M 194,416 L 318,416 L 318,432 L 194,432 Z" />
+    <!-- Symmetric Horizontal Base slightly widened to accommodate the rightward shift safely -->
+    <path d="M 186,416 L 326,416 L 326,432 L 186,432 Z" />
 
-    <!-- Leaping Horse Body 
-         Pivot moved to (220, 416) so the left edge of the horse rotates slightly downward
-         into the base, creating a solid overlapping connection, 
-         while the right side rotates upward creating the wedge slit. -->
-    <g transform="translate(220, 416) rotate(-10) skewX(-20) translate(-220, -416)">
+    <!-- Leaping Horse Body purely shifted visual-right by 6px to fix centering visually -->
+    <g transform="translate(214, 416) rotate(-10) skewX(-20) translate(-220, -416)">
       <path d="
         M 194,416 
         L 318,416 
