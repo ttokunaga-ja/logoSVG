@@ -1,16 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" style="background:#FFFFFF;">
+  <rect width="512" height="512" fill="#FFFFFF" />
   <g fill="#000000">
-    <!-- 
-      Base Arch (Gate) & Symmetrical Hand Negative Space with Cyber Slashes
-      右側の柱に、スピード感を演出する鋭利なスリット（食い込み）を完全な単一パスで表現。
-      左側の指のラインには絶対に到達しない深さに設定しています。
-    -->
+    <!-- Arch with cyber slashes -->
     <path d="
       M 100,442
       L 100,232
       A 156,156 0 0,1 412,232
       
-      <!-- Right pillar cyber slashes (Speed slits angled Up-Right) -->
       L 412,250
       L 360,280
       L 412,270
@@ -25,7 +21,6 @@
       
       L 412,442
       
-      <!-- Right bottom & inner edge (maintaining the outer boundary of the finger negative space perfectly) -->
       L 348,432
       L 348,208
       A 12,12 0 0,0 324,208
@@ -58,11 +53,7 @@
       Z
     "/>
 
-    <!-- 
-      Leaping and Forward-Leaning Knight
-      左下の角（後方）を基軸（着地点）として、右側（前方）の台座を浮かせつつ、
-      さらに上半身はシアー変形(skew)によって進行方向へ猛烈に突き進むダイナミックな体勢。
-    -->
+    <!-- Leaping and leaning knight -->
     <g transform="translate(194, 432) rotate(-12) skewX(-25) translate(-194, -432)">
       <path d="
         M 194,432 
