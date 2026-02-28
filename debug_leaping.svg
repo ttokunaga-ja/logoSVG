@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" style="background:#FFFFFF;">
   <rect width="512" height="512" fill="#FFFFFF" />
   <g fill="#000000">
     <path d="
@@ -52,39 +52,36 @@
       Z
     "/>
 
-    <!-- Horizontal Base (16px thick, reduced to 2/3 of 24px) -->
-    <path d="M 194,416 L 318,416 L 318,432 L 194,432 Z" />
+    <!-- Horizontal Base -->
+    <path d="M 194,424 L 318,424 L 318,432 L 194,432 Z" />
 
-    <!-- Leaping Horse Body 
-         Pivot moved to (220, 416) so the left edge of the horse rotates slightly downward
-         into the base, creating a solid overlapping connection, 
-         while the right side rotates upward creating the wedge slit. -->
-    <g transform="translate(220, 416) rotate(-10) skewX(-20) translate(-220, -416)">
+    <!-- Leaping Horse Body -->
+    <g transform="translate(194, 424) rotate(-12) skewX(-20) translate(-194, -424)">
       <path d="
-        M 194,416 
-        L 318,416 
-        L 302,400 
+        M 194,424 
+        L 318,424 
+        L 302,408 
         
-        L 300,366 
-        L 288,366 
+        L 300,374 
+        L 288,374 
         
-        L 290,330 
-        L 278,330 
+        L 290,338 
+        L 278,338 
         
-        L 278,300 
+        L 278,308 
         
-        L 272,278 
-        L 252,296 
+        L 272,286 
+        L 252,304 
         
-        Q 224,296 204,322 
+        Q 224,304 204,330 
         
-        L 204,332 
-        L 218,332 
-        L 214,344 
+        L 204,340 
+        L 218,340 
+        L 214,352 
         
-        Q 262,380 214,416 
+        Q 262,388 214,424 
         
-        L 194,416 
+        L 194,424 
         Z
       "/>
     </g>
