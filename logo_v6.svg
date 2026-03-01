@@ -63,7 +63,7 @@
        X translation = 256 - (358 * 0.2607) = 162.6
        Y translation = 330 - (170 * 0.2607) = 285.6 
   -->
-  <g transform="translate(162.6, 285.6) scale(0.2607, 0.2607)">
+  <g transform="translate(140.0, 310.0) scale(0.28, 0.28) rotate(-15, 358, 170)">
     <path fill="#000000" fill-rule="evenodd" d="
       M699,95 L666,54 L659,13 L634,1 L584,9 L499,63 
       L470,99 L442,108 L288,106 L264,124 L227,109 
