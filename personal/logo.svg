@@ -1,20 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc" fill="#c8962a">
-  <title id="title">Gold surrounding line</title>
-  <desc id="desc">Centered gold outline with tapered tips at 30° (top-right) and 330° (lower-right) on the unit circle around 256,256.</desc>
+  <title id="title">Gold surrounding line with veined leaf</title>
+  <desc id="desc">Centered gold outline with a two-sided leaf and a transparent circular-arc vein from 325° to 360°.</desc>
+
+  <defs>
+    <mask id="transparent-vein" maskUnits="userSpaceOnUse">
+      <rect width="512" height="512" fill="#fff"/>
+      <!-- Color-to-transparency inversion: the 325° -> 360° circular-arc vein is cut out. -->
+      <path fill="#000" d="M425.6,374.7
+               C444,346 459,295 463,256
+               C454,281 432,341 410.8,364.4
+               C415.4,369.2 420.4,372.6 425.6,374.7
+               Z"/>
+    </mask>
+  </defs>
 
   <!-- Unit-circle anchors centered on (256,256), outer r=207, inner r=189:
-       30°  outer=(435.3,152.5)  inner=(419.7,161.5)
-       90°  outer=(256,49)       inner=(256,67)
+      30°  outer=(435.3,152.5)  inner=(419.7,161.5)
+      5°   outer=(462.2,238.0)  outward r=246 tip=(501.1,234.6)
+      90°  outer=(256,49)       inner=(256,67)
       300°  outer=(359.5,435.3)  inner=(350.5,419.7)
+      325°  outer=(425.6,374.7)  inner=(410.8,364.4)
       360°  outer=(463,256)      inner=(445,256)
   -->
 
-  <!-- Upper narrowing: tip at 30°, widens into the ring at 90° -->
-  <path d="M435.3,152.5 C394.8,92.2 326.4,49 256,49 L256,67 C317.4,67.6 382.2,108.6 435.3,152.5 Z"/>
+  <g mask="url(#transparent-vein)">
+    <!-- Upper narrowing: tip at 30°, widens into the ring at 90° -->
+    <path d="M435.3,152.5 C394.8,92.2 326.4,49 256,49 L256,67 C317.4,67.6 382.2,108.6 435.3,152.5 Z"/>
 
-  <!-- Main ring: 90° around (CCW long arc) to 300° -->
-  <path d="M256,49 A207,207 0 1,0 359.5,435.3 L350.5,419.7 A189,189 0 1,1 256,67 Z"/>
+    <!-- Main ring: 90° around (CCW long arc) to 300° -->
+    <path d="M256,49 A207,207 0 1,0 359.5,435.3 L350.5,419.7 A189,189 0 1,1 256,67 Z"/>
 
-  <!-- Lower narrowing: widens out of the ring at 300°, tip at 360° -->
-  <path d="M463,256 C463,329 420,400 359.5,435.3 L350.5,419.7 C404,389 463,325 463,256 Z"/>
+    <!-- Lower narrowing: widens out of the ring at 300°, tip at 360° -->
+    <path d="M463,256 C463,329 420,400 359.5,435.3 L350.5,419.7 C404,389 463,325 463,256 Z"/>
+
+    <!--
+      Veined leaf:
+      root = center + 207 * (cos 325°, -sin 325°) = (425.6,374.7)
+      tip  = center + 246 * (cos 5°, -sin 5°) = (501.1,234.6)
+      the vein is transparent, cut out by the 325° -> 360° circular-arc mask.
+    -->
+    <path d="M425.6,374.7
+             C466,383 497,334 496,292
+             C495,264 489,246 501.1,234.6
+             C473,237 438,265 414,306
+             C398,331 398,353 410.8,364.4
+             C416.2,370 421.4,373.4 425.6,374.7
+             Z"/>
+  </g>
 </svg>
