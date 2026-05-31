@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 512" role="img" aria-labelledby="title desc" fill="#c8962a">
   <title id="title">Gold surrounding line with lemon flesh and veined leaf</title>
-  <desc id="desc">Centered gold outline with rounded lemon flesh, transparent boundary spacing, and a slim two-sided leaf rooted at 315°.</desc>
+  <desc id="desc">Centered gold outline with rounded lemon flesh and a slim two-sided leaf rooted at 315°.</desc>
 
   <defs>
     <!--
@@ -38,8 +38,6 @@
     <!--
       Lemon flesh:
       1. Define the whole rounded fan-shaped pulp first using only circular arcs.
-      2. Make the existing lemon boundary transparent with an expanded cut so
-         its spacing is closer to the outer circular arc spacing.
       The outer flesh arc uses r=178 from the main logo center, leaving about
       11px to the existing ring inner edge r=189.
       Its angular range is 185° -> 265°.
@@ -75,12 +73,6 @@
              C116.1,280.2 107.1,274.6 97.5,269.5
              C88.0,264.4 77.9,259.9 67.0,256.0
              Z"/>
-    <mask id="lemon-flesh-mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="0" y="0" width="580" height="512">
-      <rect width="580" height="512" fill="#000"/>
-      <use href="#lemon-flesh-source" fill="#fff"/>
-      <use href="#lemon-boundary-bottom-source" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
-      <use href="#lemon-boundary-left-source" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
-    </mask>
   </defs>
 
   <!-- Unit-circle anchors centered on (256,256), outer r=207, inner r=189:
@@ -116,9 +108,7 @@
 
   </g>
 
-  <g id="lemon-flesh" opacity="0.48" mask="url(#lemon-flesh-mask)">
-    <rect width="580" height="512"/>
-  </g>
+  <use id="lemon-flesh" href="#lemon-flesh-source" opacity="0.48"/>
 
   <!--
     Lemon boundary only:
