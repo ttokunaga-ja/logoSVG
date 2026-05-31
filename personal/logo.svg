@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 512" role="img" aria-labelledby="title desc" fill="#c8962a">
   <title id="title">Gold surrounding line with lemon flesh and veined leaf</title>
-  <desc id="desc">Centered gold outline with rounded lemon flesh and a slim two-sided leaf rooted at 315°.</desc>
+  <desc id="desc">Centered gold outline with a centered gold T, cut lemon flesh, and a slim two-sided leaf rooted at 315°.</desc>
 
   <defs>
     <!--
@@ -50,9 +50,25 @@
       matching the outer flesh-to-ring-inner spacing 189 - 178.
     -->
     <path id="lemon-flesh-source"
+          fill-rule="evenodd"
           d="M79.2,276.6
              A178,178 0 0,0 235.4,432.8
              A319,319 0 0,0 79.2,276.6
+             Z
+             M103.0,346.9
+             A178,178 0 0,0 106.0,351.9
+             L161.4,331.3
+             A319,319 0 0,0 159.7,329.8
+             Z
+             M143.2,393.7
+             A178,178 0 0,0 147.4,397.1
+             L176.8,346.4
+             A319,319 0 0,0 175.4,345.0
+             Z
+             M179.9,416.9
+             A178,178 0 0,0 185.7,419.5
+             L187.6,388.9
+             A69.0,69.0 0 0,1 183.4,388.5
              Z"/>
     <path id="lemon-boundary-bottom-source"
           d="M256.0,463.0
@@ -111,7 +127,43 @@
 
   </g>
 
+  <!-- Serif T drawn as vector geometry to avoid font-dependent rendering. -->
+  <path id="letter-t"
+        fill="#c8962a"
+        d="M161.0,174.0
+           C184.0,180.0 207.0,181.0 232.0,181.0
+           L280.0,181.0
+           C305.0,181.0 328.0,180.0 351.0,174.0
+           C355.0,173.0 358.0,175.0 358.8,179.0
+           L363.0,215.0
+           C363.7,221.0 355.8,222.0 354.0,216.0
+           C347.0,194.5 329.5,187.0 306.5,187.0
+           C297.6,187.0 294.0,191.0 294.0,200.5
+           L294.0,302.5
+           C294.0,321.5 304.0,330.0 326.0,331.8
+           C332.0,332.3 331.6,340.0 326.0,340.0
+           L186.0,340.0
+           C180.4,340.0 180.0,332.3 186.0,331.8
+           C208.0,330.0 218.0,321.5 218.0,302.5
+           L218.0,200.5
+           C218.0,191.0 214.4,187.0 205.5,187.0
+           C182.5,187.0 165.0,194.5 158.0,216.0
+           C156.2,222.0 148.3,221.0 149.0,215.0
+           L153.2,179.0
+           C154.0,175.0 157.0,173.0 161.0,174.0
+           Z"/>
+
   <use id="lemon-flesh" href="#lemon-flesh-source"/>
+
+  <!--
+    Lemon flesh cuts:
+    The flesh angle range is divided into 10 parts from left to right.
+    Full cuts are placed at 3/10 and 6/10. The final 4/10 block receives one
+    outer half-length cut at its midpoint, 8/10, ending at the outer flesh edge.
+    Each cut is an unfilled thin radial sector centered at (192,320) in the
+    512x512 source coordinate frame, using the even-odd fill rule rather than
+    a white overlay.
+  -->
 
   <!--
     Lemon boundary only:
