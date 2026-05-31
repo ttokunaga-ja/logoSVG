@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 512" role="img" aria-labelledby="title desc" fill="#c8962a">
-  <title id="title">Gold surrounding line with veined leaf</title>
-  <desc id="desc">Centered gold outline with a slim two-sided leaf rooted at 315° and a transparent vein that bends outward from a 330° tangent.</desc>
+  <title id="title">Gold surrounding line with lemon boundary and veined leaf</title>
+  <desc id="desc">Centered gold outline with a lemon boundary and a slim two-sided leaf rooted at 315°.</desc>
 
   <defs>
     <!--
@@ -67,6 +67,38 @@
              C412.6,372.7 420.4,364.2 427.5,355.0
              Z"/>
 
+  </g>
+
+  <!--
+    Lemon boundary only:
+    This follows the same construction as the existing circular taper.
+    The circle center is farther outside the lower-left image area: C=(-146,701).
+    Outer radius R=460. The missing part stays centered near 45°.
+    Lower region: 30° -> 44°. Upper region: 60° -> 46°.
+    For each region, inner radius tapers from R-14 to R with smoothstep(u),
+    so both regions narrow toward the missing 45° area.
+  -->
+  <g id="lemon-boundary" opacity="0.78">
+    <path d="M252.4,471.0
+             C247.7,462.9 242.8,454.9 237.6,447.1
+             C232.4,439.3 227.0,431.6 221.4,424.2
+             C215.7,416.7 209.9,409.4 203.8,402.3
+             C197.7,395.1 191.4,388.2 184.9,381.5
+             C191.4,388.2 197.1,395.7 202.1,403.7
+             C207.2,411.6 211.6,420.0 215.8,428.4
+             C219.9,436.8 223.8,445.3 227.7,453.6
+             C231.7,462.0 235.7,470.1 240.2,478.0
+             Z"/>
+    <path d="M84.0,302.6
+             C92.1,307.3 100.1,312.2 107.9,317.4
+             C115.7,322.6 123.4,328.0 130.8,333.6
+             C138.3,339.3 145.6,345.1 152.7,351.2
+             C159.9,357.3 166.8,363.6 173.5,370.1
+             C166.8,363.6 159.3,357.9 151.3,352.9
+             C143.4,347.8 135.0,343.4 126.6,339.2
+             C118.2,335.1 109.7,331.2 101.4,327.3
+             C93.0,323.3 84.9,319.3 77.0,314.8
+             Z"/>
   </g>
 
   <!--
