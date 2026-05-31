@@ -40,16 +40,19 @@
       1. Define the whole rounded fan-shaped pulp first using only circular arcs.
       The outer flesh arc uses r=178 from the main logo center, leaving about
       11px to the existing ring inner edge r=189.
-      Its angular range is 185° -> 265°.
+      Its angular range is about 186.64° -> 263.36° after intersecting with
+      the inner flesh circle.
       Inner edge also uses a circle, sharing the lemon boundary center:
-        C=(-54.3,566.3), r=323.4
+        C=(-54.3,566.3), r=319
         gamma(theta) = C + r(cos theta, -sin theta)
-        theta: 24.28° -> 65.72° from B to A.
+        theta: 24.74° -> 65.26° from B to A.
+      The lemon boundary centerline is r=330, so the radial spacing is 11px,
+      matching the outer flesh-to-ring-inner spacing 189 - 178.
     -->
     <path id="lemon-flesh-source"
-          d="M78.7,271.5
-             A178,178 0 0,0 240.5,433.3
-             A323.4,323.4 0 0,0 78.7,271.5
+          d="M79.2,276.6
+             A178,178 0 0,0 235.4,432.8
+             A319,319 0 0,0 79.2,276.6
              Z"/>
     <path id="lemon-boundary-bottom-source"
           d="M256.0,463.0
@@ -108,7 +111,7 @@
 
   </g>
 
-  <use id="lemon-flesh" href="#lemon-flesh-source" opacity="0.48"/>
+  <use id="lemon-flesh" href="#lemon-flesh-source"/>
 
   <!--
     Lemon boundary only:
@@ -121,7 +124,7 @@
     From those exact intersections the half-width tapers to 0 with smoothstep(u),
     so the lemon boundary cannot float away from the surrounding arc.
   -->
-  <g id="lemon-boundary" opacity="0.78">
+  <g id="lemon-boundary">
     <use href="#lemon-boundary-bottom-source"/>
     <use href="#lemon-boundary-left-source"/>
   </g>
