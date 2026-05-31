@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 512" role="img" aria-labelledby="title desc" fill="#c8962a">
-  <title id="title">Gold surrounding line with lemon boundary and veined leaf</title>
-  <desc id="desc">Centered gold outline with a lemon boundary and a slim two-sided leaf rooted at 315°.</desc>
+  <title id="title">Gold surrounding line with lemon flesh and veined leaf</title>
+  <desc id="desc">Centered gold outline with rounded lemon flesh, transparent boundary spacing, and a slim two-sided leaf rooted at 315°.</desc>
 
   <defs>
     <!--
@@ -33,6 +33,56 @@
         the parent leaf-system group, after the source mask and source leaf match.
       -->
       <use href="#leaf-vein-source" fill="#000"/>
+    </mask>
+
+    <!--
+      Lemon flesh:
+      1. Define the whole rounded fan-shaped pulp first.
+      2. Make the existing lemon boundary transparent with an expanded cut so
+         its spacing is closer to the outer circular arc spacing.
+      The outer flesh arc uses r=178 from the main logo center, leaving about
+      11px to the existing ring inner edge r=189.
+      Its angular range is 185° -> 265°.
+      Inner edge:
+        L(t) = (1 - t)B + tA
+        gamma(t) = L(t) + 18 * 4t(1 - t) * normalize(O - (A + B)/2)
+      This is encoded as one quadratic Bezier from B to A.
+    -->
+    <path id="lemon-flesh-source"
+          d="M78.7,271.5
+             C80.5,292.1 85.9,312.5 94.7,331.2
+             C103.4,350.0 115.5,367.2 130.1,381.9
+             C144.8,396.5 162.0,408.6 180.8,417.3
+             C199.5,426.1 219.9,431.5 240.5,433.3
+             Q185.0,327.0 78.7,271.5
+             Z"/>
+    <path id="lemon-boundary-bottom-source"
+          d="M256.0,463.0
+             C252.1,452.1 247.6,440.9 242.5,429.6
+             C237.4,418.4 231.8,407.1 225.7,396.2
+             C219.6,385.2 213.0,374.6 205.8,364.7
+             C198.7,354.7 191.1,345.4 183.1,337.1
+             C191.1,345.4 198.7,353.6 205.8,361.8
+             C213.0,370.1 219.6,378.5 225.7,387.2
+             C231.8,395.9 237.4,404.9 242.5,414.5
+             C247.6,424.0 252.1,434.1 256.0,445.0
+             Z"/>
+    <path id="lemon-boundary-left-source"
+          d="M49.0,256.0
+             C59.9,259.9 71.1,264.4 82.4,269.5
+             C93.6,274.6 104.9,280.2 115.8,286.3
+             C126.8,292.4 137.4,299.0 147.3,306.2
+             C157.3,313.3 166.6,320.9 174.9,328.9
+             C166.6,320.9 158.4,313.3 150.2,306.2
+             C141.9,299.0 133.5,292.4 124.8,286.3
+             C116.1,280.2 107.1,274.6 97.5,269.5
+             C88.0,264.4 77.9,259.9 67.0,256.0
+             Z"/>
+    <mask id="lemon-flesh-mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="0" y="0" width="580" height="512">
+      <rect width="580" height="512" fill="#000"/>
+      <use href="#lemon-flesh-source" fill="#fff"/>
+      <use href="#lemon-boundary-bottom-source" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
+      <use href="#lemon-boundary-left-source" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
     </mask>
   </defs>
 
@@ -69,6 +119,10 @@
 
   </g>
 
+  <g id="lemon-flesh" opacity="0.48" mask="url(#lemon-flesh-mask)">
+    <rect width="580" height="512"/>
+  </g>
+
   <!--
     Lemon boundary only:
     This follows the same construction as the existing circular taper.
@@ -81,26 +135,8 @@
     so the lemon boundary cannot float away from the surrounding arc.
   -->
   <g id="lemon-boundary" opacity="0.78">
-    <path d="M256.0,463.0
-             C252.1,452.1 247.6,440.9 242.5,429.6
-             C237.4,418.4 231.8,407.1 225.7,396.2
-             C219.6,385.2 213.0,374.6 205.8,364.7
-             C198.7,354.7 191.1,345.4 183.1,337.1
-             C191.1,345.4 198.7,353.6 205.8,361.8
-             C213.0,370.1 219.6,378.5 225.7,387.2
-             C231.8,395.9 237.4,404.9 242.5,414.5
-             C247.6,424.0 252.1,434.1 256.0,445.0
-             Z"/>
-    <path d="M49.0,256.0
-             C59.9,259.9 71.1,264.4 82.4,269.5
-             C93.6,274.6 104.9,280.2 115.8,286.3
-             C126.8,292.4 137.4,299.0 147.3,306.2
-             C157.3,313.3 166.6,320.9 174.9,328.9
-             C166.6,320.9 158.4,313.3 150.2,306.2
-             C141.9,299.0 133.5,292.4 124.8,286.3
-             C116.1,280.2 107.1,274.6 97.5,269.5
-             C88.0,264.4 77.9,259.9 67.0,256.0
-             Z"/>
+    <use href="#lemon-boundary-bottom-source"/>
+    <use href="#lemon-boundary-left-source"/>
   </g>
 
   <!--
