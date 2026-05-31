@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 512" role="img" aria-labelledby="title desc" fill="#c8962a">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc" fill="#c8962a">
   <title id="title">Gold surrounding line with lemon flesh and veined leaf</title>
   <desc id="desc">Centered gold outline with a centered gold T, cut lemon flesh, and a slim two-sided leaf rooted at 315°.</desc>
 
@@ -26,8 +26,8 @@
              C435.7,327.4 433.2,332.4 430.6,337.4
              C428.0,342.4 425.2,347.3 422.5,352.1
              Z"/>
-    <mask id="transparent-vein" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="0" y="0" width="580" height="512">
-      <rect width="580" height="512" fill="#fff"/>
+    <mask id="transparent-vein" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <rect width="512" height="512" fill="#fff"/>
       <!--
         Source transparent vein. The final geometric reflection is applied by
         the parent leaf-system group, after the source mask and source leaf match.
@@ -104,6 +104,9 @@
       360°  outer=(463,256)      inner=(445,256)
   -->
 
+  <!-- Keep the circular construction centered on the 512x512 image center. -->
+  <g id="centered-logo" transform="translate(256 256) scale(0.86) translate(-256 -256)">
+
   <g>
     <!-- Upper narrowing: tip at 30°, widens into the ring at 90° -->
     <path d="M435.3,152.5 C394.8,92.2 326.4,49 256,49 L256,67 C317.4,67.6 382.2,108.6 435.3,152.5 Z"/>
@@ -127,7 +130,7 @@
 
   </g>
 
-  <!-- Serif T drawn as vector geometry to avoid font-dependent rendering. -->
+  <!-- Serif T drawn as explicit vector geometry. -->
   <path id="letter-t"
         fill="#c8962a"
         d="M161.0,174.0
@@ -138,15 +141,15 @@
            L363.0,215.0
            C363.7,221.0 355.8,222.0 354.0,216.0
            C347.0,194.5 329.5,187.0 306.5,187.0
-           C297.6,187.0 294.0,191.0 294.0,200.5
-           L294.0,302.5
-           C294.0,321.5 304.0,330.0 326.0,331.8
-           C332.0,332.3 331.6,340.0 326.0,340.0
-           L186.0,340.0
-           C180.4,340.0 180.0,332.3 186.0,331.8
-           C208.0,330.0 218.0,321.5 218.0,302.5
-           L218.0,200.5
-           C218.0,191.0 214.4,187.0 205.5,187.0
+           C284.5,187.0 277.0,191.0 277.0,200.5
+           L277.0,302.5
+           C277.0,321.5 287.0,330.0 306.0,331.8
+           C312.0,332.3 311.6,340.0 306.0,340.0
+           L206.0,340.0
+           C200.4,340.0 200.0,332.3 206.0,331.8
+           C225.0,330.0 235.0,321.5 235.0,302.5
+           L235.0,200.5
+           C235.0,191.0 227.5,187.0 205.5,187.0
            C182.5,187.0 165.0,194.5 158.0,216.0
            C156.2,222.0 148.3,221.0 149.0,215.0
            L153.2,179.0
@@ -219,5 +222,6 @@
                C403.4,387.1 399.8,391.7 396.0,396.0
                Z"/>
     </g>
+  </g>
   </g>
 </svg>
