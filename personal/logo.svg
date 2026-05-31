@@ -37,24 +37,21 @@
 
     <!--
       Lemon flesh:
-      1. Define the whole rounded fan-shaped pulp first.
+      1. Define the whole rounded fan-shaped pulp first using only circular arcs.
       2. Make the existing lemon boundary transparent with an expanded cut so
          its spacing is closer to the outer circular arc spacing.
       The outer flesh arc uses r=178 from the main logo center, leaving about
       11px to the existing ring inner edge r=189.
       Its angular range is 185° -> 265°.
-      Inner edge:
-        L(t) = (1 - t)B + tA
-        gamma(t) = L(t) + 18 * 4t(1 - t) * normalize(O - (A + B)/2)
-      This is encoded as one quadratic Bezier from B to A.
+      Inner edge also uses a circle, sharing the lemon boundary center:
+        C=(-54.3,566.3), r=323.4
+        gamma(theta) = C + r(cos theta, -sin theta)
+        theta: 24.28° -> 65.72° from B to A.
     -->
     <path id="lemon-flesh-source"
           d="M78.7,271.5
-             C80.5,292.1 85.9,312.5 94.7,331.2
-             C103.4,350.0 115.5,367.2 130.1,381.9
-             C144.8,396.5 162.0,408.6 180.8,417.3
-             C199.5,426.1 219.9,431.5 240.5,433.3
-             Q185.0,327.0 78.7,271.5
+             A178,178 0 0,0 240.5,433.3
+             A323.4,323.4 0 0,0 78.7,271.5
              Z"/>
     <path id="lemon-boundary-bottom-source"
           d="M256.0,463.0
