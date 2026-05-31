@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc" fill="#c8962a">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc" fill="#808080">
   <title id="title">Gold surrounding line with lemon flesh and veined leaf</title>
   <desc id="desc">Centered gold outline with a centered gold T, cut lemon flesh, and a slim two-sided leaf rooted at 315°.</desc>
 
@@ -132,7 +132,7 @@
 
   <!-- Serif T drawn as explicit vector geometry. -->
   <path id="letter-t"
-        fill="#c8962a"
+        fill="#808080"
         d="M161.0,174.0
            C184.0,180.0 207.0,181.0 232.0,181.0
            L280.0,181.0
